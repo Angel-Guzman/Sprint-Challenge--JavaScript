@@ -76,9 +76,7 @@ const graduates = [
  This will be an array of strings.
 
 Once you have the new array created, log the result. */
-const universities = graduates.map(function(item){
-  return `${item.university}`;
-});
+const universities = graduates.map(item => `${item.university}`);
 console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
@@ -88,9 +86,7 @@ The resulting contact information strings should have a space between the first 
 "Josh josh@example.com"
 
 Log the result of your new array. */
-const contactInfo = graduates.map(function(item){
-  return `${item.first_name} ${item.email}`;
-});
+const contactInfo = graduates.map(item => `${item.first_name} ${item.email}`);
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. 
@@ -133,9 +129,7 @@ displayNames will be an array of strings, and each string should follow this pat
 */
 const displayNames = [];
 
-zooAnimals.forEach(function(item){
-  return displayNames.push(`Name: ${item.animal_name}, Scientific: ${item.scientific_name}`)
-});
+zooAnimals.forEach(item => displayNames.push(`Name: ${item.animal_name}, Scientific: ${item.scientific_name}`));
 
 console.log(displayNames);
 
@@ -147,9 +141,7 @@ Using map, create a new array of strings named lowCaseAnimalNames, each string f
 
 */
 
-const lowCaseAnimalNames = zooAnimals.map(function(item){
-  return item.animal_name.toLowerCase();
-})
+const lowCaseAnimalNames = zooAnimals.map(item => item.animal_name.toLowerCase());
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
@@ -159,9 +151,7 @@ Using filter, create a new array of objects called lowPopulationAnimals which co
 the animals with a population less than 5.
 
 */
-const lowPopulationAnimals = zooAnimals.filter(function(item){
-  return item.population < 5;
-})
+const lowPopulationAnimals = zooAnimals.filter(item => item.population < 5)
 console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 
@@ -171,9 +161,7 @@ Find the total population from all the zoos using the .reduce() method.
 Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-const populationTotal = zooAnimals.reduce(function(accumulator, item){
-  return accumulator + item.population;
-}, 0);
+const populationTotal = zooAnimals.reduce((accumulator, item) => accumulator + item.population, 0);
 console.log(`The total population is: ${populationTotal}`);
 
 
